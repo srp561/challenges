@@ -29,7 +29,7 @@ To achieve the requirements, you should follow this procedure:
 2. Set up the pipeline
 3. Modify the `index.html` file, changing the content inside `<main></main>` tags for something else i.e. `Hello! I'm [YOUR_NAME]`.
 4. Build the docker image and push it to a container registry
-5. (BONUS POINT) Deploy the image and run the app somewhere on AKS/EKS/Minikube/Your own Kubernetes cluster, if possible create the CD pipeline in Jenkins for the deployment to Kubernetes cluster.
+5. (BONUS POINT) Deploy the image and run the app somewhere on AKS/EKS/Minikube/Your own Kubernetes cluster, if possible create the CD pipeline in Jenkins for the deployment to Kubernetes cluster and apply blue/green deployment.
 
 
 ## Deliverables
