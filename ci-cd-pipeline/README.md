@@ -21,7 +21,7 @@ At least:
 3. You must use [Docker Hub](https://hub.docker.com) or any other *Docker* container registres like ACR, ECR etc. to save the container images.
 4. The pipeline should be triggered when a *Pull request* is merged into `main` or `master` branches of your repository. Direct commits into `main` or `master` are not allowed.
 5. You must use as much configuration-as-code (CaC) as possible. Authentication secrets like usernames/passwords/tokens should be isolated from the tools you're using.
-6. (BONUS POINT) Deploy the image and run the app somewhere on AKS/EKS/Minikube/Your own Kubernetes cluster, if possible create the CD pipeline in Jenkins for the deployment to Kubernetes cluster.
+6. (BONUS POINT) Deploy the image and run the app somewhere on AKS/EKS/Minikube/Your own Kubernetes cluster, if possible create the CD pipeline in Jenkins for the deployment to Kubernetes cluster and apply blue/green deployment.
 
 ## Steps
 To achieve the requirements, you should follow this procedure:
