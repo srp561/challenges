@@ -1,20 +1,20 @@
 #!/bin/bash
 
-DOCKER_REPO_URI=868981377508.dkr.ecr.eu-west-1.amazonaws.com/challenges/ci-cd-pipeline
+DOCKER_REPO_URI=868981377508.dkr.ecr.eu-west-1.amazonaws.com/challenges
 
 
 function build() {
     echo "Building image"
-    docker build -t challenges/ci-cd-pipeline .
+    docker build -t challenges .
 }
 
 function push() {
     echo "Push images"
     $(aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 868981377508.dkr.ecr.eu-west-1.amazonaws.com)
 
-    docker tag challenges/ci-cd-pipeline:latest $DOCKER_REPO_URI/challenges/ci-cd-pipeline:latest
+    docker tag challenges:latest $DOCKER_REPO_URI/challenges:latest
 
-    docker push $DOCKER_REPO_URI/challenges/ci-cd-pipeline:latest
+    docker push $DOCKER_REPO_URI/challenges:latest
 }
 
 function options() {

@@ -15,9 +15,8 @@ pipeline {
         stage('Build and Push images to ECR') {
         steps{
         script {
-	  sh './ci-cd-pipeline/start.sh build'
-	  sh 'docker images'
-          sh './ci-cd-pipeline/start.sh push'
+	  sh './start.sh build'
+          sh './start.sh push'
         }
       }
     }
