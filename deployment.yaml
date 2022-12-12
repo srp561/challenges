@@ -18,8 +18,8 @@ spec:
     spec:
       containers:
         - name: challenges
-          image: 868981377508.dkr.ecr.eu-west-1.amazonaws.com/challenges/ci-cd-pipeline:latest
+          image: 868981377508.dkr.ecr.eu-west-1.amazonaws.com/challenges:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 8005
               protocol: TCP
           imagePullPolicy: Always
