@@ -16,6 +16,7 @@ pipeline {
         steps{
         script {
 	  sh './start.sh build'
+	  sh 'aws ecr batch-delete-image --repository-name challenges --image-ids imageTag=latest'
           sh './start.sh push'
         }
       }
@@ -26,6 +27,8 @@ pipeline {
                  echo 'Empty'
             }
         }
-        
+
+
+}    
 }
 }
