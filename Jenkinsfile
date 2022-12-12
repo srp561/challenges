@@ -15,6 +15,7 @@ environment {
         AWS_ECS_CLUSTER = 'sample-challenge'
         AWS_ECS_TASK_DEFINITION_PATH = './td.json'
         AWS_ECS_EXECUTION_ROL = 'ecsTaskExecutionRole'
+	registryCredential = "aws-keys"
 }
 
     stages {
@@ -41,13 +42,15 @@ environment {
                  echo 'Empty'
             }
         }
-stage('Deploy in ECS') {
-  steps {
-      script {
-	sh './td-script.sh'
-}
-}
-}
+    stage('Deploy') {
+     steps{
+            withAWS(credentials: registryCredential, region: "${AWS_DEFAULT_REGION}") {
+                script {
+			sh './td-script.sh'
+                }
+            } 
+        }
+      }  
 }
 }
 
