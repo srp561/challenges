@@ -6,6 +6,7 @@ pipeline {
 
 environment {
         AWS_ECR_REGION = 'eu-west-1'
+	AWS_DEFAULT_REGION = 'eu-west-1'
         AWS_ECS_SERVICE = 'challenge'
         AWS_ECS_TASK_DEFINITION = 'challenge-td'
         AWS_ECS_COMPATIBILITY = 'FARGATE'
