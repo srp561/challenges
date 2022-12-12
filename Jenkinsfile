@@ -29,7 +29,8 @@ pipeline {
         
 	stage('Deploy'){
             steps {
-                 sh 'kubectl apply -f deployment.yml'
+                 sh 'kubectl apply -f deployment.yml --context challenges-cluster'
+		 sh 'kubectl rollout restart deployment challenges'
             }
         }
 }
