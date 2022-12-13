@@ -4,7 +4,7 @@ DOCKER_REPO_URI=868981377508.dkr.ecr.eu-west-1.amazonaws.com/challenges
 function build() {
     echo "Building image"
     docker build -t challenges .
- 
+} 
 
 function push() {
     echo "Push image"
