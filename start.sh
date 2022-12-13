@@ -10,7 +10,7 @@ function build() {
 
 function push() {
     echo "Push image"
-    $(aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 868981377508.dkr.ecr.eu-west-1.amazonaws.com)
+    $(aws ecr get-login-password --no-include-email --region eu-west-1 | docker login --username AWS --password-stdin 868981377508.dkr.ecr.eu-west-1.amazonaws.com)
 
     docker tag challenges:latest $DOCKER_REPO_URI/challenges:latest
     docker push $DOCKER_REPO_URI/challenges:latest
