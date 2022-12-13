@@ -23,24 +23,7 @@ pipeline {
       }
     }
 
-<<<<<<< HEAD
+
 	 }
  }  
 
-
-=======
-	stage('Test'){
-            steps {
-                 echo 'Empty'
-            }
-        }
-        
-	stage('Deploy'){
-            steps {
-                 sh 'kubectl apply -f deployment.yml --context challenges-cluster'
-		 sh 'kubectl rollout restart deployment challenges'
-            }
-        }
-}
-}
->>>>>>> parent of f619bbb... Updated
