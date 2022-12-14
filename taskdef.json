@@ -3,7 +3,7 @@
       { 
          "essential": true,
          "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-         "name": "challenges-app",
+         "name": "challenges-task-definition",
          "portMappings": [ 
             { 
                "containerPort": 8000,
