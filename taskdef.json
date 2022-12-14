@@ -1,21 +1,27 @@
 {
-    "family": "challenges",
-    "containerDefinitions": [
-        {
-            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "challenges",
-            "cpu": 256,
-            "memory": 512,
-            "essential": true,
-            "portMappings": [
-                {
-                    "containerPort": 8000,
-                    "hostPort": 8000
-                }
-            ],
-      "requiresCompatibilities": [
-       "FARGATE"
-    ]
-        }
+   "containerDefinitions": [ 
+      { 
+         "essential": true,
+         "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+         "name": "challenges",
+         "portMappings": [ 
+            { 
+               "containerPort": 8000,
+               "hostPort": 8000,
+               "protocol": "tcp"
+            }
+         ]
+      }
+   ],
+   "cpu": "256",
+   "executionRoleArn": "arn:aws:iam::868981377508:role/ecsTaskExecutionRole",
+   "family": "fargate-task-definition",
+   "memory": "512",
+   "networkMode": "awsvpc",
+   "runtimePlatform": {
+        "operatingSystemFamily": "LINUX"
+   },
+   "requiresCompatibilities": [ 
+       "FARGATE" 
     ]
 }
