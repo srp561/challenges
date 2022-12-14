@@ -17,6 +17,7 @@
    "executionRoleArn": "arn:aws:iam::868981377508:role/ecsTaskExecutionRole",
    "family": "challenges-task-definition",
    "memory": "512",
+   "networkMode": "awsvpc",
    "runtimePlatform": {
         "operatingSystemFamily": "LINUX"
    },
