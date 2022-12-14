@@ -3,7 +3,7 @@
       { 
          "essential": true,
          "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-         "name": "challenges",
+         "name": "challenges-app",
          "portMappings": [ 
             { 
                "containerPort": 8000,
@@ -15,7 +15,7 @@
    ],
    "cpu": "256",
    "executionRoleArn": "arn:aws:iam::868981377508:role/ecsTaskExecutionRole",
-   "family": "fargate-task-definition",
+   "family": "challenges-task-definition",
    "memory": "512",
    "networkMode": "awsvpc",
    "runtimePlatform": {
