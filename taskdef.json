@@ -1,0 +1,18 @@
+{
+    "family": "challenges",
+    "containerDefinitions": [
+        {
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "name": "challenges",
+            "cpu": 256,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8000,
+                    "hostPort": 8000
+                }
+            ]
+        }
+    ]
+}
